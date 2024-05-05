@@ -30,11 +30,11 @@ OSEK standard is priority based, if same priority ,then it is first come first s
 
 basic tasks are self terminating
 
-PICTURE
+![Screenshot 2024-05-04 212931](https://github.com/yasminEzF/iti_notes/assets/109252157/3cc9e6f4-93d2-434b-9d30-acf00b4e6eb6)
 
 ### 1.2. Extended Task
 
-PICTURE
+![Screenshot 2024-05-04 213402](https://github.com/yasminEzF/iti_notes/assets/109252157/cf1067a4-6d92-476f-9dbe-40cf01417324)
 
 ### preemptive tasks
 
@@ -80,7 +80,7 @@ for a shared resource `u32 z;`, Task 1 reads, Task 2 writes
 
 ### priority inversion
 
-PICTURE
+![Screenshot 2024-05-04 224201](https://github.com/yasminEzF/iti_notes/assets/109252157/7eb9225c-b078-4339-9f96-d80e396dfe1f)
 
 ### deadlock
 
@@ -96,7 +96,7 @@ T1.getResource(r1)  //failed
 
 inheriting priority could be at resource get of lower task or at resource request of higher task
 
-PICTURE
+![Screenshot 2024-05-04 225838](https://github.com/yasminEzF/iti_notes/assets/109252157/efb62f14-edbc-4588-a889-972c24fdee0a)
 
 ### priority cieling
 
