@@ -20,7 +20,7 @@ Task activated by alarm, ISR or Task
 
 Resources are HW (LCD, SPI, CAN, ...) or SW (global variable, ...)
 
-![327968324-5ab3cf4a-d616-42e7-882b-df12ed4f0d7a](https://github.com/yasminEzF/Notes/assets/109252157/187c9fd0-7be5-4b4e-8705-8c1783ddf815)
+![image](https://github.com/yasminEzF/iti_notes/assets/109252157/5ab3cf4a-d616-42e7-882b-df12ed4f0d7a)
 
 ## 1. Tasks
 
@@ -30,22 +30,21 @@ OSEK standard is priority based, if same priority ,then it is first come first s
 
 basic tasks are self terminating
 
-![Screenshot 2024-05-04 212931](https://github.com/yasminEzF/Notes/assets/109252157/19aa816d-f282-4bb1-b527-ecbc00fd121d)
+![Screenshot 2024-05-04 212931](https://github.com/yasminEzF/iti_notes/assets/109252157/3cc9e6f4-93d2-434b-9d30-acf00b4e6eb6)
 
 ### 1.2. Extended Task
 
-![Screenshot 2024-05-04 213402](https://github.com/yasminEzF/Notes/assets/109252157/ee054c39-b56c-473e-b8d7-552cba71a4d5)
+![Screenshot 2024-05-04 213402](https://github.com/yasminEzF/iti_notes/assets/109252157/cf1067a4-6d92-476f-9dbe-40cf01417324)
 
 ### preemptive tasks
 
 priority 3 is higher than priority 2, once a higher priority task is ready -if the running task is preemptive- lower priority task is interrupted and switched to ready state, while the higher priority task runs.
 
 |   |Task 2 | Task 3
--------|-------|-------
-priority| 2 | 3 
-t1|running|ready
-t2|ready|running
-
+|-------|-------|-------
+|priority| 2 | 3
+|t1|running|ready
+|t2|ready|running
 
 ### task definition using OIL language
 
@@ -80,9 +79,7 @@ for a shared resource `u32 z;`, Task 1 reads, Task 2 writes
 
 ### priority inversion
 
-for a shared resource between Task1 & Task3, with assigned priorities as `T3` > `T2` > `T1`
-
-![Screenshot 2024-05-04 224201](https://github.com/yasminEzF/Notes/assets/109252157/39376d5b-b6f5-4cf7-8791-9022efe97c03)
+![Screenshot 2024-05-04 224201](https://github.com/yasminEzF/iti_notes/assets/109252157/7eb9225c-b078-4339-9f96-d80e396dfe1f)
 
 ### deadlock
 
@@ -98,7 +95,7 @@ T1.getResource(r1)  //failed
 
 inheriting priority could be at resource get of lower task or at resource request of higher task
 
-![Screenshot 2024-05-04 225838](https://github.com/yasminEzF/Notes/assets/109252157/a9cb809b-5e0a-4e05-b12d-965ebe5268ea)
+![Screenshot 2024-05-04 225838](https://github.com/yasminEzF/iti_notes/assets/109252157/efb62f14-edbc-4588-a889-972c24fdee0a)
 
 ### priority cieling
 
@@ -124,14 +121,14 @@ upgrading lower task priority to higher task priority + 1, decreases inversion t
 
 |  | Preemptive | Nonpreemptive
 |---|---|---
-Activate Task | T | F
-Terminate Task | T | T
-Wait event | T | T
-Chaining task | T | T
-get resource  | F | F
-release resource | T | F
-sched(); | T | T
-ISR | T | F
+|Activate Task | T | F
+|Terminate Task | T | T
+|Wait event | T | T
+|Chaining task | T | T
+|get resource  | F | F
+|release resource | T | F
+|sched(); | T | T
+|ISR | T | F
 
 ## 3. Hooks
 
