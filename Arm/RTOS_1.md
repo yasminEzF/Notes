@@ -63,7 +63,7 @@ piece of code that is written as a sole application with its `while(1)`, as if i
 
 ### context switching
 
-![alt text](image-1.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/7c50c21e-c0e9-4633-8956-1034d031cc59)
 
 A task is represented as a `Task Control Block (TCB)` for the `OS` and only knows the data in it for the task such as: priority, stack size, entry point, stack pointer and program counter.
 
@@ -107,7 +107,7 @@ the `kernel` is the core of the `OS` which is responsible for:
 3. `running`: task that's currently using `CPU` which is of highest priority (task with context switched)
 4. `waiting`: tasks that need a `resource` which is not currently available
 
-![alt text](image-2.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/25bf5504-8a72-4d50-a6da-9d284dd3a092)
 
 at any `OS_fun()` call, a reevaluation of ready, running and waiting queues occurs to update task states
 
@@ -137,7 +137,7 @@ in some `OS`, `scheduler` determines task to run and context switches too
 
 assuming that `T2` is of higher priority than `T1`
 
-![alt text](image-3.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/55e6451d-53d3-47c1-956c-68dcdeec8a33)
 
 `nenpreemptive kernel` is a `cooperative system` in which `non-reentrant functions` can be used with no protection. shared resource protection is not needed as well UNLESS owner task goes to `waiting` state and another requests the same resource.
 
@@ -168,7 +168,7 @@ each task runs for `OS_timeslot` called `quanta` until it runs out so `OS` switc
 
 for `T1` and `T3` that share resource `R`, task priorities as `T3` > `T2` > `T1`, the following scenario takes place:
 
-![alt text](<Screenshot 2024-05-04 224201.png>)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/7dd548fd-7ea7-4f71-ac11-385b474878b7)
 
 1. `T1` runs & aquires `R`
 2. `T3` ready & starts running (higher priority)
@@ -187,7 +187,7 @@ for `T1` and `T3` that share resource `R`, task priorities as `T3` > `T2` > `T1`
 
 inheriting priority happens at `resourceRequest();` of higher task only to avoid priority inversion between `T1` and `T2` (when needed)
 
-![alt text](<Screenshot 2024-05-04 225838.png>)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/188c2fce-3b35-4e02-912f-38175288894c)
 
 if `round robin` is activated & `T4` exists with same priority as `T3`, inversion time would increase
 
