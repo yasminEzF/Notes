@@ -20,7 +20,7 @@ Task activated by alarm, ISR or Task
 
 Resources are HW (LCD, SPI, CAN, ...) or SW (global variable, ...)
 
-![image](https://github.com/yasminEzF/iti_notes/assets/109252157/5ab3cf4a-d616-42e7-882b-df12ed4f0d7a)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/255ea272-3cfa-499b-8f12-65651b25c1a3)
 
 ## 1. Tasks
 
@@ -30,11 +30,11 @@ OSEK standard is priority based, if same priority ,then it is first come first s
 
 basic tasks are self terminating
 
-![Screenshot 2024-05-04 212931](https://github.com/yasminEzF/iti_notes/assets/109252157/3cc9e6f4-93d2-434b-9d30-acf00b4e6eb6)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/deb9efdd-27bf-485a-beec-bd270e3ce269)
 
 ### 1.2. Extended Task
 
-![Screenshot 2024-05-04 213402](https://github.com/yasminEzF/iti_notes/assets/109252157/cf1067a4-6d92-476f-9dbe-40cf01417324)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/125ce42a-8a23-4940-8e7a-ce60f722ca66)
 
 ### preemptive tasks
 
@@ -79,7 +79,7 @@ for a shared resource `u32 z;`, Task 1 reads, Task 2 writes
 
 ### priority inversion
 
-![Screenshot 2024-05-04 224201](https://github.com/yasminEzF/iti_notes/assets/109252157/7eb9225c-b078-4339-9f96-d80e396dfe1f)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/8948d38c-97d1-416f-8a73-62693c144045)
 
 ### deadlock
 
@@ -95,7 +95,7 @@ T1.getResource(r1)  //failed
 
 inheriting priority could be at resource get of lower task or at resource request of higher task
 
-![Screenshot 2024-05-04 225838](https://github.com/yasminEzF/iti_notes/assets/109252157/efb62f14-edbc-4588-a889-972c24fdee0a)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/5d78ce46-c4c4-4be6-b601-1a9a2ae14de8)
 
 ### priority cieling
 
