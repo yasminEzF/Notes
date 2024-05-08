@@ -90,7 +90,7 @@ bus matrix doesn't have timestamps, it only contains data about each message (se
 
 ## frame
 
-![image](https://github.com/yasminEzF/Notes/assets/109252157/76c2f875-f804-44e8-81e3-a52dc467fdca)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/c819d4a8-7d6a-409c-8eb3-b64aff0d4d4a)
 
 - `SOF`: 1-bit LOW
 - `arbitration field`: 11/32-bits
