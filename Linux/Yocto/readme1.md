@@ -33,7 +33,7 @@ contains configurations `local.conf`
 
 a generator provided by poky
 
-![image](https://github.com/yasminEzF/iti_notes/assets/109252157/174941c2-6227-4536-aaf8-e1435087436c)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/51f5811a-0528-4627-8194-3311b4bfc651)
 
 1. parse configurations
 2. fetch
