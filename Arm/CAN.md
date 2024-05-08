@@ -27,7 +27,7 @@ There are 2 types of trancievers for different speeds:
 
 in CAN low speed, voltage switching range is 3.6 volts while CAN high speed switches 1 volt only so it is faster
 
-![image](https://github.com/yasminEzF/Notes/assets/109252157/560deeb1-b864-4b89-ac87-f0f04fe1f726)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/ec5b9c84-7995-489e-863e-63dd08ee1077)
 
 ## arbitration
 
