@@ -107,7 +107,7 @@ the `kernel` is the core of the `OS` which is responsible for:
 3. `running`: task that's currently using `CPU` which is of highest priority (task with context switched)
 4. `waiting`: tasks that need a `resource` which is not currently available
 
-![image](https://github.com/yasminEzF/Notes/assets/109252157/25bf5504-8a72-4d50-a6da-9d284dd3a092)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/5379bc2a-dfdd-43bf-b60e-666c73506e4c)
 
 at any `OS_fun()` call, a reevaluation of ready, running and waiting queues occurs to update task states
 
@@ -168,7 +168,7 @@ each task runs for `OS_timeslot` called `quanta` until it runs out so `OS` switc
 
 for `T1` and `T3` that share resource `R`, task priorities as `T3` > `T2` > `T1`, the following scenario takes place:
 
-![image](https://github.com/yasminEzF/Notes/assets/109252157/7dd548fd-7ea7-4f71-ac11-385b474878b7)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/cc5646a0-a472-4171-9947-984054919dd0)
 
 1. `T1` runs & aquires `R`
 2. `T3` ready & starts running (higher priority)
