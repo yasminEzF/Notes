@@ -4,7 +4,7 @@ creating a protocol is limited by HW constrains, for example if a proposed proto
 
 ## Physical Layer
 
-![alt text](image.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/7c689e85-82a9-480f-9b38-c4c87617845f)
 
 CAN communication needs a CAN controller and tranciever, that depends on the voltage difference between 2 wires
 
@@ -27,7 +27,7 @@ There are 2 types of trancievers for different speeds:
 
 in CAN low speed, voltage switching range is 3.6 volts while CAN high speed switches 1 volt only so it is faster
 
-![alt text](image-1.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/560deeb1-b864-4b89-ac87-f0f04fe1f726)
 
 ## arbitration
 
@@ -35,11 +35,11 @@ since there are no masters on Bus, how is it determined which message is being t
 
 each node performs `bit-monitoring` to check if its message is the one on the bus or if it lost arbitration and another node has ownership
 
-![alt text](image-3.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/2951af84-3a98-4cb9-ae0d-71e7c5dfbd36)
 
 if duraning transmission of `Event A` message, Evenets B and C are triggered, after event A end of frame, arbitration will occur to determine which of the two messages gets transmitted first
 
-![alt text](image-4.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/5664b3c6-c87d-4066-81a1-66b81a3f3bf3)
 
 in a scenarion where `N0`, `N1`, `N2` want to transmit on the bus at the same time, each node and the Bus will have the following values
 
@@ -76,7 +76,7 @@ in CAN communication, there is no guarantee that any message will be sent
 
 ### 3. Error frame
 
-   ![alt text](image-5.png)
+   ![image](https://github.com/yasminEzF/Notes/assets/109252157/33ae69e7-026a-4315-916d-82c2a83db2cc)
 
 ### Bus Matrix
 
@@ -90,7 +90,7 @@ bus matrix doesn't have timestamps, it only contains data about each message (se
 
 ## frame
 
-![alt text](image-7.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/76c2f875-f804-44e8-81e3-a52dc467fdca)
 
 - `SOF`: 1-bit LOW
 - `arbitration field`: 11/32-bits
@@ -110,7 +110,7 @@ bus matrix doesn't have timestamps, it only contains data about each message (se
 - `EOF`: 7-bits set to HIGH
 - `Intermission (ITM)`: 3-bits set to HIGH
 
-![alt text](image-6.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/02091f2a-f52c-4ee6-99bc-6ee80dff29c3)
 
 in case of extended frame, the `MsgID` is composed of 29-bits, 11 of which are sent as in standard data frame, while the rest 18-bits are sent after `IDE` field (set to HIGH) and `Substitute Remote Request (SRR)` field (1-bit set to HIGH). after the extended ID, `RTR` is sent followed by 2 reserved bits set to LOW and the `DLC` follows as normal.
 
@@ -151,7 +151,5 @@ form check is for `Ack`, `CRC` delimiters and `EOF`. if any of them is set to LO
 
 ### Bit Stuffing
 
-![alt text](image-8.png)
-
-# CAN TP
+![image](https://github.com/yasminEzF/Notes/assets/109252157/68982b1b-9de2-4a6c-ae0a-5075517d6fa0)
 
