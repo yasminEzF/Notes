@@ -28,7 +28,7 @@ struct reg{
 
 ## Padding vs Packing
 
-![alt text](image-1.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/b65ef71d-8d12-4906-8b09-fc9a88f30deb)
 
 |aligned (padding) | unaligned (packing)
 |---------|----------
