@@ -153,3 +153,4 @@ form check is for `Ack`, `CRC` delimiters and `EOF`. if any of them is set to LO
 
 ![image](https://github.com/yasminEzF/Notes/assets/109252157/68982b1b-9de2-4a6c-ae0a-5075517d6fa0)
 
+Sender injects a different bit every 5 consecutive similar bits and on the other side, reciever compares arriving bit stream for 5 consecutive similar bits and removes the fifth to filter the data correctly. if 6 consecutive similar bits are found, then it would indicate an error in the stream.
