@@ -54,7 +54,7 @@ in a scenarion where `N0`, `N1`, `N2` want to transmit on the bus at the same ti
 |`T2`|1|0|-|0
 |**TX**|1|0|||
 |**RX**|0|0|||
-|`T3`|win|-|-|
+|`T3`|-|win|-|
 
 `N1` and `N2` lost arbitration, so they wil wait for next frame to try again, also if any other node wants to transmit a message while a frame is being sent on the bus, it will have to wait as well
 
@@ -136,7 +136,7 @@ Ack is checked by sender if a reciever replied with Ack. If no recievers exist o
 
 ### Bit Monitor
 
-|Node | Bus |   |
+|Node | Bus |
 |---------|----------|---------
 | 0 | 0 | OK
 | 1 | 0 | Arbitration lost
@@ -154,3 +154,8 @@ form check is for `Ack`, `CRC` delimiters and `EOF`. if any of them is set to LO
 ![image](https://github.com/yasminEzF/Notes/assets/109252157/68982b1b-9de2-4a6c-ae0a-5075517d6fa0)
 
 Sender injects a different bit every 5 consecutive similar bits and on the other side, reciever compares arriving bit stream for 5 consecutive similar bits and removes the fifth to filter the data correctly. if 6 consecutive similar bits are found, then it would indicate an error in the stream.
+
+`NOTE`:
+
+- NRZ encoding, Manchester encoding as a concept bas farhadt CAN tbh
+- smth about error frames (check vector elearning)
