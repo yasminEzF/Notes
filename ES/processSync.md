@@ -2,7 +2,7 @@
 
 Two tasks can typically communicate through a shared resource (shared memory). The section of code that accesses this memory will be called `critical section (CS)`, while the rest of the code will be called `non-critical`.
 
-![alt text](image-1.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/2ba1fd91-8f0e-483f-b442-209f1ec119e7)
 
 in an example where `counter` is a shared resource between `T1` and `T2`, which are preemptive, the scenario is as follows:
 
@@ -12,11 +12,11 @@ in an example where `counter` is a shared resource between `T1` and `T2`, which 
 4. `T2` is done, so `T1` returns to continue execution and increments old copy of `counter` to `1`
 5. `T1` stores `counter` value as `1` instead of `0` (data corruption)
 
-![alt text](image-4.png)
+![image-4](https://github.com/yasminEzF/Notes/assets/109252157/2bde596f-c835-4d0b-8068-65bb9981b17c)
 
 for every `CS` in code, there exists an `entry section` and `exit section` for protection and to ensure that the code works and accesses shared resources correctly and safely.
 
-![alt text](image-2.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/723470ac-f3db-49d7-a5c4-be37af7f68be)
 
 ## methods for sync
 
@@ -35,7 +35,7 @@ for every `CS` in code, there exists an `entry section` and `exit section` for p
 
 ### 1. Lock Variable
 
-![alt text](image-5.png)
+![image-5](https://github.com/yasminEzF/Notes/assets/109252157/2ba71601-321c-40ae-8f12-050542d8d2a0)
 
 |Evaluation parameter | Status | Cause
 |---------|----------|---------
@@ -52,7 +52,7 @@ for every `CS` in code, there exists an `entry section` and `exit section` for p
 
 load and store instructions are combined into 1 new atomic assembly instruction (no interruption can occur in between). This allows the reading of `lock` flag and locking it just incase until condition evaluation complete.
 
-![alt text](image-6.png)
+![image-6](https://github.com/yasminEzF/Notes/assets/109252157/183ba5ed-e2e9-4489-a58b-9c7033ddfa0d)
 
 |Evaluation parameter | Status | Cause
 |---------|----------|---------
@@ -71,7 +71,7 @@ load and store instructions are combined into 1 new atomic assembly instruction 
 
 Tasks take turns executing critical sections, on condition that a process ca't execute it's `CS` unless the other process took its turn.
 
-![alt text](image-7.png)
+![image-7](https://github.com/yasminEzF/Notes/assets/109252157/2fd2c30a-3f10-4308-8c6b-f8f2c61421c2)
 
 |Evaluation parameter | Status | Cause
 |---------|----------|---------
@@ -88,7 +88,7 @@ Tasks take turns executing critical sections, on condition that a process ca't e
 
 not really used as a method because disabling interrupts would mean killing the `OS`. (tasks are non-preemptive?)
 
-![alt text](image-8.png)
+![image-8](https://github.com/yasminEzF/Notes/assets/109252157/6c298406-2428-4afb-8614-8da49e2a89ce)
 
 ### 4. Interested Variable
 
