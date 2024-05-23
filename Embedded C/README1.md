@@ -67,3 +67,8 @@ union packet{
 `union` share the same memory and take up space equivalent to the largest element.
 
 ## Coding Guidlines
+
+### MISRA C
+
+- no dynamic allocation
+- no multiple exit points in a function (single return)
