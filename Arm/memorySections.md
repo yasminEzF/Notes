@@ -34,7 +34,7 @@ uint16_t *ptr16 = (uint16_t*)ptr;
 uint8_t *ptr8 = (uint8_t*)ptr;
 ```
 
-![alt text](image-5.png)
+![image-5](https://github.com/yasminEzF/Notes/assets/109252157/aa371a9d-ae4f-4ed4-9ea5-d315c81d5da2)
 
 Column A | Little endian | Big endian
 ---------|----------|---------
@@ -55,7 +55,7 @@ Code optimization works on one parameter while using more of the other, for exam
 
 ## Memory sections
 
-![alt text](image-6.png)
+![image-6](https://github.com/yasminEzF/Notes/assets/109252157/ccead8ba-d782-4759-a6d8-36e54bda1894)
 
 ```c
 static global var = value;          // .data            ROM -> RAM
