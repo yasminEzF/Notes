@@ -1,4 +1,4 @@
-# RTOS
+# RTOS Lec 1
 
 ## Concepts
 
