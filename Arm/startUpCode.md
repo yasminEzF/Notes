@@ -2,7 +2,7 @@
 
 `startup` is the first code that runs after `Reset`, followed by `main()`.
 
-![alt text](image-7.png)
+![image-7](https://github.com/yasminEzF/Notes/assets/109252157/d88c956c-9606-4c5d-8a61-455947d0213a)
 
 feature entry point, driver entry point
 
@@ -28,7 +28,7 @@ startup code is a code the requires stack to execute, so how does it init stack?
 
 ## initialization of `.data` and `.bss`
 
-![alt text](image-8.png)
+![image-8](https://github.com/yasminEzF/Notes/assets/109252157/0e378222-09e7-4194-b397-5ea120b56259)
 
 using start and end pointers for memory sections that are defined during linking, startup code is written to initialize the required sections.
 
