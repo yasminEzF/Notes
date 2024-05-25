@@ -35,7 +35,7 @@ ptr--;
 
 Every Time a Pointer is incremented, it Points To The Next Memory Location of its Base Type.
 
-![alt text](image-3.png)
+![image-3](https://github.com/yasminEzF/Notes/assets/109252157/b164e500-6a05-4196-88c0-385c10693a6e)
 
 ### pointer to array
 

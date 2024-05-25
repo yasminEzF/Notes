@@ -57,7 +57,7 @@ int main(){
 }
 ```
 
-![alt text](image-2.png)
+![image-2](https://github.com/yasminEzF/Notes/assets/109252157/de98e6c7-58b8-4602-9311-8064eb4c3fca)
 
 ```c
 #define new_print(name)         printf(#name)   //stringification
