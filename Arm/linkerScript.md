@@ -1,6 +1,6 @@
 # Linker Script (Lec 11)
 
-![alt text](image-9.png)
+![image-9](https://github.com/yasminEzF/Notes/assets/109252157/22d94a50-9c1d-4ce8-a49c-6448c7366f50)
 
 ## String handling in memory
 
@@ -10,17 +10,17 @@ char* sptr = "my string";
 
 when assigning a string like this, the string is created and stored in ROM and `sptr` contains its address. Since it gets stored in ROM, it is impossible to modify it during runtime and `sptr` is used as `ptr to const char`. A way to overcome this can be by creating a copy of it in RAM to write and modify.
 
-![alt text](image-10.png)
+![image-10](https://github.com/yasminEzF/Notes/assets/109252157/6b88b782-7c1a-4cf2-b5c3-ee09a9ab4192)
 
 ## Linker Script
 
-![alt text](image-11.png)
+![image-11](https://github.com/yasminEzF/Notes/assets/109252157/0b2dce4b-e1d5-4d14-a30f-f23146ed7cfa)
 
 Up to the `file.o` stage, no data is included about target memory or physical addresses (logical addressing for each file independently). The `Linker` as a tool is generic for all architectures and what differentiates linking between archs is the `linker script` which works as a config file containing data about target memory size and physical addresses.
 
 Compiler adds flags for Linker, changing compiler or linker needs reconfiguration for linker syntax.
 
-![alt text](image-12.png)
+![image-12](https://github.com/yasminEzF/Notes/assets/109252157/449fc84f-9745-4620-a490-3a304db4db83)
 
 As a concept, `Linker script` or `linker directive (ld)` contains the description of
 
@@ -58,7 +58,7 @@ sections{
 
 Linker creates a dot `.` for each memory which contains current location and increments with each append.
 
-![alt text](image-13.png)
+![image-13](https://github.com/yasminEzF/Notes/assets/109252157/26df54fe-9602-4164-8844-ac0ed043329a)
 
 ## Linker API's
 
@@ -80,7 +80,7 @@ Being able to create `labels` in `linker script` must mean the ability to use th
 
 3 labels are created for the start address of `.bss` which means `startBSS`, `bss_s` and `bss_start` all contain the same location. `endBSS` label contains last location of `.bss` (actually contains first location after `.bss` so it is not written to zero in startup code).
 
-![alt text](image-14.png)
+![image-14](https://github.com/yasminEzF/Notes/assets/109252157/bacf93d9-5850-4e5c-9a81-3a5c94c62e0f)
 
 - `.bss(no load): ALIGN(4)`: no load -> section exists in one memory, alignment set to 4 bytes.
 - `.data{}>RAM AT>FLASH`: since `.data` section locations are reserved in RAM but values are stored in Flash. At least 3 locations are needed to perfom data copying (src_start/src_end & dest_start).
