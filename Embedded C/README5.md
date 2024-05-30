@@ -4,19 +4,19 @@
 
 By default, declared variables are `signed` unless explicitly declared `unsigned`.
 
-![alt text](image-12.png)
+![image-12](https://github.com/yasminEzF/Notes/assets/109252157/0813a11c-83ef-4aec-a73e-753f1c0bfeb2)
 
 `Signed magnitude` representation resulted in some drawbacks
 
-![alt text](image-13.png)
+![image-13](https://github.com/yasminEzF/Notes/assets/109252157/d74ffb3a-ad14-4b81-a551-9b5bcef63e23)
 
 `One's compliment` representation solved the issue for mathematical operations but still had it's drawback of having `+0` and `-0`.
 
-![alt text](image-14.png)
+![image-14](https://github.com/yasminEzF/Notes/assets/109252157/db54f7b3-1bac-4bc2-b7b6-0d02425db2f1)
 
 `Two's compliment` representation solved both issues, where a number's 2's compliment is its `1's compliment + 1`.
 
-![alt text](image-15.png)
+![image-15](https://github.com/yasminEzF/Notes/assets/109252157/edf488dc-8e83-4d10-9761-c0cb19b5e4fb)
 
 -128 | 0 | 127
 ---------|----------|---------
@@ -97,7 +97,7 @@ Assures header file inclusion only once and so `macros`, `typedefs`, `enums` and
 
 ## Memory Layout in C
 
-![alt text](image-16.png)
+![image-16](https://github.com/yasminEzF/Notes/assets/109252157/67ac1798-c30e-4540-9849-55fbc8c2ce27)
 
 - `text segment`: contains executable code and program logic, read-only.
 - `heap`: dynamically allocated memory.
