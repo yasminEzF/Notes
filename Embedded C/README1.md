@@ -66,6 +66,8 @@ union packet{
 
 `union` share the same memory and take up space equivalent to the largest element.
 
+## Little endian vs Big endian
+
 ## Coding Guidlines
 
 ### MISRA C

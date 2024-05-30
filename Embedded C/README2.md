@@ -104,13 +104,15 @@ __TIME__                //time of translation? asctime()
 
 It is compiler specific. If it is not supported, compiler simply ignores it.
 
+Not a preprocessor directive as it gets resolved during compilation time
+
 ```c
 #pragma startup[priority] func   //priority is 64~255 for user
 /* void __attribute__((constructor)) func(); */
 #pragma exit[priority] func      //priority is 0~63 for c lib
                                  //default is 100
 /* void __attribute__((destructor)) func(); */
-#pragma once                //replaced by header guard
+#pragma once                //replaced by header guard (include once)
 #pragma pack(n)             // n is (1,2,4,8) for alignment
 ```
 

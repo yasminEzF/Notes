@@ -1,6 +1,6 @@
 # Embedded C Lec 4 (Pointers)
 
-## Pointer to Pointer
+## Pointer to Pointer (double-pointer)
 
 ```c
 int x;
@@ -20,6 +20,8 @@ char *ptrArr[2] = {"ab","cd"};
 ```
 
 ## pointer to function
+
+Used for `Callback Functions` that allow lower-layer modules to call upper-layer functions.
 
 ```c
 int (*funPtr)(void);
@@ -61,4 +63,112 @@ char* (*(*foo)[5])(char**); // ptr to arr of 5 ptr to fun
 
 ## constant pointers
 
+```c
+const int *ptr;     // ptr to const int (can't modify data)
+int const *ptr;
 
+int* const ptr;     // const ptr to int (can't move ptr)
+
+const int * const ptr;  // const ptr to const int (can't move or modify)
+int const * const ptr;
+```
+
+```c
+#include <stdio.h> 
+
+const int a = 10; /* Global const stored in .rodata in ROM */
+
+int main() {
+  const int b = 5;  /* Local const stored in stack */
+  int *ptr = &b;    
+
+  *ptr = 20;        /* Modified */
+  
+  printf("b = %d\n",b);     // b = 20
+  
+  ptr = &a;         
+  *ptr = 20;        /* Segmentation fault (can't write flash) */
+    
+  printf("a = %d\n",a);
+    
+  return 0;
+}
+```
+
+## Pointer Types
+
+### Generic pointer
+
+points to unknown type, can be casted to any for use.
+
+```c
+void* ptr;
+```
+
+### NULL pointer
+
+NULL pointers do not point to any memory location, can't be dereferenced.
+
+```c
+int* ptr = NULL;
+```
+
+### Dangling pointer
+
+A pointer pointing to memory that has been freed which results in Undefined behavior if dereferenced.
+
+```c
+int* ptr = (int*)malloc(sizeof(int));
+free(ptr);
+*ptr = 10; 
+```
+
+```c
+int* getPointer() {
+    int x = 10;
+    return &x; // Local variable x goes out of scope
+}
+int* ptr = getPointer(); //ptr points to out of scope memory address
+```
+
+### Wild pointer
+
+A pointer that has not been initialized to a known valid memory location which results in Undefined behavior if dereferenced.
+
+```c
+int* ptr;   
+*ptr = 10;  // not initialized
+```
+
+```c
+int* ptr;
+free(ptr);
+*ptr = 10; // memory deallocated
+```
+
+### Near, Far, Huge pointers
+
+idk, skipped.
+
+## Dynamic memory allocation
+
+from `stdlib.h`
+
+- `malloc`: returns void pointer to allocated memory, returns `NULL` if failed to allocate.
+- `calloc`: allocates and initializes by zero.
+- `free`: de-allocates memory.
+- `realloc`: maintains data while reallocating a new block.
+
+`memory leak` occurs when allocating memory in heap and not deleting it.
+
+```c
+int* ptr1 = (int*)malloc(5*sizeof(int));
+
+int* ptr2 = (int*)calloc(5, sizeof(int));
+
+free(ptr1);
+
+ptr2 = (int*)realloc(ptr2, 10*sizeof(int));
+```
+
+## Coding guidelines
