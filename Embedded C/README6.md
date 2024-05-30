@@ -145,7 +145,7 @@ Two tasks can exchange data through shared memory. Same problem can occur from o
 
 ## Build process
 
-![alt text](image-10.png)
+![image-10](https://github.com/yasminEzF/Notes/assets/109252157/c80f1578-e9a1-4bc8-accf-1c7cdb37bee2)
 
 ### preprocessing
 
@@ -168,4 +168,4 @@ creates a final executable file and `.map` file.
 
 `.map` file contains lengths of the sections and the names and locations of the public symbols found in the executable file.
 
-![alt text](image-11.png)
+![image-11](https://github.com/yasminEzF/Notes/assets/109252157/7548b992-3106-46b4-9d70-36cba20effa4)
