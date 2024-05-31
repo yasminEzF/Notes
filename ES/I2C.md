@@ -2,7 +2,7 @@
 
 ## Bus Topology
 
-![alt text](image-8.png)
+![image-8](https://github.com/yasminEzF/Notes/assets/109252157/df05e5b5-83be-4b5d-8c4a-d92f7a1e734e)
 
 Connection is `open-drain`, where writing `LOW` to bus results in `LOW` over bus while writing `HIGH` results in leaving the bus floating. If connection was `Push-Pull`, writing `LOW` would write `LOW` on bus and writing `HIGH` would write `HIGH` which would eventually lead to shortcircuiting on the bus.
 
@@ -19,7 +19,7 @@ Ech node on the bus has a pre-determined address.
 
 ## Frame
 
-![alt text](image-12.png)
+![image-12](https://github.com/yasminEzF/Notes/assets/109252157/9205a14d-c402-450c-a1fe-0d8f6a2d0618)
 
 Field | Sent by | Description
 ---------|----------|---------
@@ -44,7 +44,7 @@ Since I2C is a multi-master multi-slave protocol, what happens if two masters wa
 
 Since bus is configured as open-drain connection, writing `low` to the bus is dominant over writing `high` which would leave the bus as floating, making arbitration determined depending on `Slave Adress` with the MSB's being zeroes, and in case of same slave address, determined for `write` command which is a bus `low`, if both want to perform the same command, then both will recieve slave `Ack` and `data` bits will be the ones to determine bus `Master`.
 
-![alt text](image-10.png)
+![image-10](https://github.com/yasminEzF/Notes/assets/109252157/3b74aa76-d3fe-489f-a4b4-9be2134e84cf)
 
 Master needs to monitor bus constantly to check if lost arbitration or if it is still Bus Master.
 
@@ -52,7 +52,7 @@ Address `0b000 0000` is reserved as broadcast address to be recieved by all slav
 
 ## Interfacing with EEPROM
 
-![alt text](image-11.png)
+![image-11](https://github.com/yasminEzF/Notes/assets/109252157/5298f34f-85e9-4275-80fb-260dcbbdeae2)
 
 EEPROM has set commands to communicate so the first frame would always be set to `write` the desired command to EEPROM, and then the second frame would follow to send the data depending on what was specified in the frame before.
 
