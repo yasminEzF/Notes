@@ -164,4 +164,5 @@ Sender injects a different bit every 5 consecutive similar bits and on the other
 - NRZ encoding, Manchester encoding as a concept bas farhadt CAN tbh
 - smth about error frames (check vector elearning)
 - read more abt CAN FD (flexible datarate 64-byte) & extended data frame
-- ![alt text](image-3.png)
+- ![image-3](https://github.com/yasminEzF/Notes/assets/109252157/594ea82c-2afc-4b0a-b9dd-77f6154a17c8)
+
