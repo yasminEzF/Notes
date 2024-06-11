@@ -4,11 +4,11 @@
 
 When using `In-curcuit Programming (ICP)`, program is flashed using a debugger through `JTAG` or `SWI` but after product is packaged, access is lost to these interfaces. What if bugs appear and the need to reflash these bug fixes arises?
 
-![alt text](image.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/6f1a463e-25de-4f45-84eb-ad848284715c)
 
 In order to be able to reflash the program after product packaging, `Flash` is divided to contain two programs. A `bootloader` or a flashing application that is flashed by a debugger and the `product` application that can be reflashed using the `bootloader` through any communication interface.
 
-![alt text](image-1.png)
+![image-1](https://github.com/yasminEzF/Notes/assets/109252157/86cf2d06-c34a-4a3a-b447-8ceaaf46c933)
 
 `Bootloader` should be able to perform the following functionalities:
 
@@ -48,7 +48,7 @@ In case a single byte needs modification, whole sector must be read in RAM then 
 
 Performing `Mass Erase` would result in erasing of whole Flash which would mean deletion of the program that requested the `Erasure`.
 
-![alt text](image-2.png)
+![image-2](https://github.com/yasminEzF/Notes/assets/109252157/7b98b847-5f30-450b-bedb-3897dd5b5d26)
 
 ### Sector Erase
 
