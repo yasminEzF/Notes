@@ -92,7 +92,7 @@ not really used as a method because disabling interrupts would mean killing the 
 
 ### 4. Interested Variable
 
-![alt text](image.png)
+![image](https://github.com/yasminEzF/Notes/assets/109252157/b75ff786-bd5a-48a6-bd70-564f4f67af4d)
 
 |Evaluation parameter | Status | Cause
 |---------|----------|---------
@@ -124,7 +124,7 @@ not really used as a method because disabling interrupts would mean killing the 
 
 Entry section executes as following for each process, the process identifies other processes that exist along with it and sets its own `interest` variable as `True`, it then reserves its turn to enter its critical section, then waits for as long as the other process' `interest` variable is set and the turn is owned by it. Once the other process is done, it will execute Exit section which will clear its `interest` variable, allowing the first process to break out of the while and enter its critical section.
 
-![alt text](image-2.png)
+![image-2](https://github.com/yasminEzF/Notes/assets/109252157/5f68695c-3be2-4b6a-8a90-590a1299a74c)
 
 assuming `P0` and `P1` processes exits, their interest variables initialized as `False`:
 
@@ -148,7 +148,7 @@ assuming `P0` and `P1` processes exits, their interest variables initialized as 
 
 no `while` loops and no waiting occurs, but simply `OS` handles each process and moves them between waiting, ready & running states. Processes execute in `user` mode, make `system calls` and execute them in `kernel` mode (non-preemptive).
 
-![alt text](image-3.png)
+![image-3](https://github.com/yasminEzF/Notes/assets/109252157/376bbcc8-52ce-48ae-9f98-0b36330557a2)
 
 ### 1.1 Binary Semaphore
 
