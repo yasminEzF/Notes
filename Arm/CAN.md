@@ -118,7 +118,11 @@ it is important to note in `Data Field` whether the most significant bytes are s
 
 sending MSB first allows for message ID's to be sorted as 0 (most important) to N-MsgID (least important) for correct arbitration.
 
-## error checking
+## Error Checking
+
+For any error checking mechanism, two things must be defined which are `field` that will be monitored for error and `checker` which is the component that will detect the error. `Error frame` sender is the `error` checker.
+
+Checking for node failure is in the bus architecture phase that designs a monitoring app that checks messages for predefined minimum/maximum periodicity.
 
 1. CRC by reciever
 2. Ack by sender
@@ -126,15 +130,15 @@ sending MSB first allows for message ID's to be sorted as 0 (most important) to 
 4. form check by reciever
 5. bit stuffing by reciever
 
-### CRC
+### 1. CRC
 
 CRC is calculated by reciever and compared by the one calculated and sent by sender for each bit in the frame until the CRC field
 
-### Ack
+### 2. Ack
 
 Ack is checked by sender if a reciever replied with Ack. If no recievers exist on the bus, the sender will recieve a negative Ack (idle bus = HIGH)
 
-### Bit Monitor
+### 3. Bit Monitor
 
 |Node | Bus |
 |---------|----------|---------
@@ -145,17 +149,19 @@ Ack is checked by sender if a reciever replied with Ack. If no recievers exist o
 
 bus is monitored throughout the whole frame to make sure that the message being transmitted is on the bus correctly except for `arbitration field` where mismatching would mean losing arbitration and `EOF` where it would mean that a reciever is sending an error frame.
 
-### Form Check
+### 4. Form Check
 
 form check is for `Ack`, `CRC` delimiters and `EOF`. if any of them is set to LOW, that would indicate a format error and lead to error handling.
 
-### Bit Stuffing
+### 5. Bit Stuffing
 
 ![image](https://github.com/yasminEzF/Notes/assets/109252157/68982b1b-9de2-4a6c-ae0a-5075517d6fa0)
 
 Sender injects a different bit every 5 consecutive similar bits and on the other side, reciever compares arriving bit stream for 5 consecutive similar bits and removes the fifth to filter the data correctly. if 6 consecutive similar bits are found, then it would indicate an error in the stream.
 
-`NOTE`:
+## `NOTES`
 
 - NRZ encoding, Manchester encoding as a concept bas farhadt CAN tbh
 - smth about error frames (check vector elearning)
+- read more abt CAN FD (flexible datarate 64-byte) & extended data frame
+- ![alt text](image-3.png)

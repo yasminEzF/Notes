@@ -92,10 +92,66 @@ not really used as a method because disabling interrupts would mean killing the 
 
 ### 4. Interested Variable
 
+![alt text](image.png)
+
+|Evaluation parameter | Status | Cause
+|---------|----------|---------
+|**Mutual Exclusion** | success `:)` |
+|**Progress**| fail `:(` | Due to Deadlock scenario where none of the tasks are in critical sections but they are blocking each other.
+|**Bounded limit** | success `:)` | achived because `T2` sets its `interest2` variable and blocks `T1` from re-entering `CS` before it.
+
+`Deadlock` occurs in case that `T1` set `interest1` variable then `T2` set `interest2` variable, so that both tasks get stuck while none of them is in a critical section.
+
+|Pros | Drawbacks
+|---------|----------
+| multiple processes | busy wait method
+|  | causes Deadlock so it isn't used
+
 ### 5. Peterson
+
+```c
+ entry ( processNum ) {
+  int other = 1 - processNum;                               // 1
+  interest [processNum] = True;                             // 2
+  turn = processNum;                                        // 3
+  while( interest [other] = True && turn == processNum );   // 4
+ } 
+
+  exit ( processNum ) {
+  interest [processNum] = False;
+ } 
+```
+
+Entry section executes as following for each process, the process identifies other processes that exist along with it and sets its own `interest` variable as `True`, it then reserves its turn to enter its critical section, then waits for as long as the other process' `interest` variable is set and the turn is owned by it. Once the other process is done, it will execute Exit section which will clear its `interest` variable, allowing the first process to break out of the while and enter its critical section.
+
+![alt text](image-2.png)
+
+assuming `P0` and `P1` processes exits, their interest variables initialized as `False`:
+
+- `P0` executes first 2 lines of Entry section, so it identifies the presence of `P1` and sets its `interest` variable.
+- `P1` executes first 3 lines and does the same as `P0` but sets turn to be `P1`.
+- `P0` executes and sets turn to be `P0` and gets stuck waiting.
+- `P1` checks condition to wait and enters critical section as normal.
+
+|Evaluation parameter | Status | Cause
+|---------|----------|---------
+|**Mutual Exclusion** | success `:)`
+|**Progress**| success `:)` | Blocking occurs when a process sets turn after another process already claimed it (re-check example `P1` set trun variable first)
+|**Bounded limit** | success `:)`
+
+|Pros | Drawbacks
+|---------|----------
+| HW independent | busy wait method
+| multiple processes | 
 
 ## Non-Busy wait methods
 
-### 1.1 Semaphore
+no `while` loops and no waiting occurs, but simply `OS` handles each process and moves them between waiting, ready & running states. Processes execute in `user` mode, make `system calls` and execute them in `kernel` mode (non-preemptive).
+
+![alt text](image-3.png)
+
+### 1.1 Binary Semaphore
+
+
 
 ### 1.2 Counter Semaphore
